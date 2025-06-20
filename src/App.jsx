@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
 import { v4 as uuidv4 } from 'uuid';
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { IoIosAdd } from "react-icons/io";
-// import { GrRevert } from "react-icons/gr";
 import { HiArrowUturnRight } from "react-icons/hi2";
 const App = () => {
   const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState([]);
   const [finished, setfinished] = useState([])
-  // ✅ Load from localStorage once on first render
   useEffect(() => {
     const storedTodos = localStorage.getItem('todos');
     const storedfinished=localStorage.getItem('finished');
@@ -32,7 +29,6 @@ const App = () => {
     }
   }, []);
 
-  // ✅ Save to localStorage whenever todos changes
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
@@ -98,7 +94,6 @@ const App = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <div className="container mx-auto bg-blue-100 rounded-2xl m-4 p-5 w-screen lg:w-2/3">
         <div className="addTodo">
           <h2 className="text-lg">Add a todo</h2>
