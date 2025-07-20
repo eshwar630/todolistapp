@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useEffect, useState } from 'react';
 import { FaEdit } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
-import { IoIosAdd } from "react-icons/io";
 import { HiArrowUturnRight } from "react-icons/hi2";
+import { IoIosAdd } from "react-icons/io";
+import { MdDelete } from "react-icons/md";
+import { v4 as uuidv4 } from 'uuid';
 const App = () => {
   const [todo, setTodo] = useState('');
   const [todos, setTodos] = useState([]);
